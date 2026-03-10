@@ -115,7 +115,7 @@ print(tokenizer.decode(generate_ids[0], skip_special_tokens=False))
 ```
 
 ## 📊 Evaluation
-We provide scripts to reproduce the speedup and acceptance length metrics in the paper. The reported results were tested on NVIDIA H200 or B200 GPUs.
+We provide scripts to reproduce the speedup and acceptance length metrics in the paper. The reported results were tested on NVIDIA H200 or B200 GPUs. Please note that only Qwen3 series and LLaMA-3.1 models support Transformers backend benchmark. For other models please use SGLang to run the benchmarks.
 
 To run benchmark on Transformers backend:
 ```bash
