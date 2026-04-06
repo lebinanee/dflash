@@ -4,7 +4,7 @@
 **DFlash** is a lightweight **block diffusion** model designed for speculative decoding. It enables efficient and high-quality parallel drafting.
 <br>
 
-![DFlash Architecture](https://github.com/user-attachments/assets/ffff3d17-96c9-421c-8d26-97127aafdba9)
+![DFlash Architecture](https://raw.githubusercontent.com/jianc99/jianc99.github.io/master/images/dflash_system.png)
 
 https://github.com/user-attachments/assets/5b29cabb-eb95-44c9-8ffe-367c0758de8c
 
