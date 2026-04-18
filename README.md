@@ -54,8 +54,7 @@ uv pip install -U vllm --torch-backend=auto --extra-index-url https://wheels.vll
 ```bash
 # Note: num_speculative_tokens=10 is a good starting point for memory-constrained setups;
 # increase to 15-20 for maximum throughput on high-VRAM GPUs.
+# Personal note: I've found 12 to be a sweet spot on a single A100 80GB for Qwen3.5-27B.
 vllm serve Qwen/Qwen3.5-27B \
-  --speculative-config '{"method": "dflash", "model": "z-lab/Qwen3.5-27B-DFlash", "num_speculative_tokens": 15}' \
-  --attention-backend flash_attn \
-  --max
+  --s
 ```
