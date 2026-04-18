@@ -1,8 +1,12 @@
+# Personal fork of z-lab/dflash
+# Customization: added 'benchmark' to __all__ for easier direct imports
+
 __all__ = [
     "DFlashDraftModel",
     "extract_context_feature",
     "load_and_process_dataset",
     "sample",
+    "benchmark",
 ]
 
 
@@ -11,6 +15,11 @@ def __getattr__(name):
         from .benchmark import load_and_process_dataset
 
         return load_and_process_dataset
+
+    if name == "benchmark":
+        from . import benchmark
+
+        return benchmark
 
     if name in {"DFlashDraftModel", "extract_context_feature", "sample"}:
         from .model import DFlashDraftModel, extract_context_feature, sample
