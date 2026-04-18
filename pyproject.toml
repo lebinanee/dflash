@@ -41,4 +41,6 @@ mlx = [
 dev = [
     "ipython",
     "jupyter",
+    "pytest",        # for running tests locally
+    "ruff",          # linting/formatting
 ]
