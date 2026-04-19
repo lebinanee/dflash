@@ -30,4 +30,8 @@ def __getattr__(name):
             "sample": sample,
         }[name]
 
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+    # Note: provide a friendlier error message listing available names
+    raise AttributeError(
+        f"module {__name__!r} has no attribute {name!r}. "
+        f"Available names: {__all__}"
+    )
