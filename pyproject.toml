@@ -42,5 +42,7 @@ dev = [
     "ipython",
     "jupyter",
     "pytest",        # for running tests locally
+    "pytest-cov",    # coverage reports
     "ruff",          # linting/formatting
+    "mypy",          # type checking
 ]
