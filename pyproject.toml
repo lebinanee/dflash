@@ -45,4 +45,5 @@ dev = [
     "pytest-cov",    # coverage reports
     "ruff",          # linting/formatting
     "mypy",          # type checking
+    "pre-commit",    # run ruff/mypy checks before commits
 ]
