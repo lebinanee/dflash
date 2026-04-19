@@ -47,4 +47,6 @@ dev = [
     "mypy",          # type checking
     "pre-commit",    # run ruff/mypy checks before commits
     "ipdb",          # better debugger than pdb
+    "matplotlib",    # for plotting speculative decoding acceptance rate curves
+    "seaborn",       # nicer plots
 ]
