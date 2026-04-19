@@ -46,4 +46,5 @@ dev = [
     "ruff",          # linting/formatting
     "mypy",          # type checking
     "pre-commit",    # run ruff/mypy checks before commits
+    "ipdb",          # better debugger than pdb
 ]
