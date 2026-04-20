@@ -36,5 +36,6 @@ def __getattr__(name):
     raise AttributeError(
         f"module {__name__!r} has no attribute {name!r}. "
         f"Available names: {__all__}. "
-        f"See README for usage examples."
+        f"See README for usage examples. "
+        f"If you meant to import a submodule, try 'import dflash.<submodule>' directly."
     )
