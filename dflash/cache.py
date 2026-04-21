@@ -98,8 +98,23 @@ class SlidingWindowCache(DynamicCache):
         return full_k, full_v
 
 
-def make_cache(window_size: Optional[int] = None) -> DynamicCache:
-    """Factory: returns a SlidingWindowCache or DynamicCache."""
-    if window_size is not None:
-        return SlidingWindowCache(window_size)
-    return DynamicCache()
+def make_cache(
+    cache_type: str = "dynamic",
+    window_size: int = 512,
+) -> DynamicCache:
+    """Factory helper to create a cache by name.
+
+    Args:
+        cache_type: One of ``"dynamic"`` or ``"sliding_window"``.
+        window_size: Only used when ``cache_type="sliding_window"``.
+            Default changed to 512 (was 256 upstream) — fits better on
+            my 24 GB GPU for the models I typically run.
+
+    Returns:
+        A freshly initialised cache instance.
+    """
+    if cache_type == "sliding_window":
+        return SlidingWindowCache(window_size=window_size)
+    if cache_type == "dynamic":
+        return DynamicCache()
+    raise ValueError(f"Unknown cache_type {cache_type!r}. Choose 'dynamic' or 'sliding_window'.")
