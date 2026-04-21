@@ -54,6 +54,6 @@ uv pip install -U vllm --torch-backend=auto --extra-index-url https://wheels.vll
 ```bash
 # Note: num_speculative_tokens=10 is a good starting point for memory-constrained setups;
 # increase to 15-20 for maximum throughput on high-VRAM GPUs.
-# Personal note: I've found 12 to be a sweet spot on a single A100 80GB with Qwen3.5-9B —
-# good acceptance rate without blowing the KV cache budget.
+# Personal note: I've found 12 to be a sweet spot on a single A100 80GB with Qwen3-8B —
+# good acceptance rate without hitting OOM. Your mileage may vary depending on batch size.
 ```
